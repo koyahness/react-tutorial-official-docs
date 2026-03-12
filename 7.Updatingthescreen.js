@@ -29,3 +29,34 @@ The first time the button is displayed, count will be 0 because you passed 0 to 
     </button>
   );
 }
+
+
+// React will call your component function again. This time, count will be 1. Then it will be 2. And so on.
+
+// If you render the same component multiple times, each will get its own state. Click each button separately:
+
+import { useState } from 'react';
+
+export default function MyApp() {
+  return (
+    <div>
+      <h1>Counters that update separately</h1>
+      <MyButton />
+      <MyButton />
+    </div>
+  );
+}
+
+function MyButton() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  );
+}
