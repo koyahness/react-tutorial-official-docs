@@ -53,8 +53,10 @@ const user = {
 
 export default function Profile() {
   return (
+    
     <>
       <h1>{user.name}</h1>
+
       <img
         className="avatar"
         src={user.imageUrl}
@@ -64,7 +66,9 @@ export default function Profile() {
           height: user.imageSize
         }}
       />
+
     </>
+
   );
 }
 
