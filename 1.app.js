@@ -5,7 +5,10 @@ function MyButton() {
     </button>
   );
 }
+//my button is a component
 
+
+//Now that you’ve declared MyButton, you can nest it into another component:
 export default function MyApp() {
   return (
     <div>
